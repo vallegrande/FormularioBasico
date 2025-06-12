@@ -5,12 +5,13 @@ app = Flask(__name__)
 
 # Configuración de conexión a MySQL
 config = {
-    'host': 'localhost',
-    'port': 33060,  # asegúrate de usar el puerto correcto
-    'user': 'root',
-    'password': 'entrecodigosycafe',  # tu contraseña si tienes
+    'host': 'formulariobd.cwyqzggrckgs.us-east-1.rds.amazonaws.com',
+    'port': 3306,
+    'user': 'admin',
+    'password': '6082228gian9',
     'database': 'formulario_db'
 }
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -63,4 +64,6 @@ def datos():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
+
