@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+
+    <!-- ✅ Tailwind CSS vía CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Opcional: configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-xl mx-auto bg-white shadow p-6 rounded">
+        <h2 class="text-2xl font-bold mb-6 text-center">Formulario de Registro</h2>
+        <form action="/" method="POST" class="grid grid-cols-1 gap-4">
+            <input type="text" name="nombre" placeholder="Nombres" required class="p-2 border rounded">
+            <input type="text" name="apellidos" placeholder="Apellidos" required class="p-2 border rounded">
+            <input type="email" name="correo" placeholder="Correo electrónico" required class="p-2 border rounded">
+            <input type="text" name="telefono" placeholder="Teléfono" required class="p-2 border rounded">
+            
+            <select name="sexo" required class="p-2 border rounded">
+                <option value="">Sexo</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            
+            <input type="text" name="ciudad" placeholder="Ciudad" required class="p-2 border rounded">
+            <input type="number" name="edad" placeholder="Edad" required class="p-2 border rounded">
+            <input type="text" name="ocupacion" placeholder="Ocupación" required class="p-2 border rounded">
+            
+            <!-- ✅ Campo nuevo: Fecha -->
+            <input type="date" name="fecha" required class="p-2 border rounded">
+
+            <button type="submit" class="bg-primary text-white p-2 rounded hover:bg-blue-700 transition duration-200">
+                Enviar
+            </button>
+        </form>
+
+        <div class="text-center mt-4">
+            <a href="/datos" class="text-primary hover:underline">Ver datos registrados</a>
+        </div>
+    </div>
+</body>
+</html>
